@@ -1,0 +1,99 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+h1{
+    color: #000000;
+    background-color: #f0f0f0;
+    margin: 0;
+    text-align: center;
+}
+
+.calculator {
+    width: 320px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-display {
+    background: #444;
+    padding: 20px;
+    text-align: right;
+    border-bottom: 1px solid #555;
+}
+
+.calculator-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 2rem;
+    text-align: right;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+}
+
+.key {
+    background: #444;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.key:hover {
+    background: #555;
+}
+
+.key[data-action="equals"] {
+    grid-column: span 2;
+    background: #e67e22;
+}
+
+.key[data-action="equals"]:hover {
+    background: #cf7118;
+}
+
+.key[data-action="clear"] {
+    background: #e74c3c;
+}
+
+.key[data-action="clear"]:hover {
+    background: #cf4430;
+}
+
+.key[data-action="delete"] {
+    background: #f39c12;
+}
+
+.key[data-action="delete"]:hover {
+    background: #db890f;
+}
+
+.key[data-action="divide"],
+.key[data-action="multiply"],
+.key[data-action="subtract"],
+.key[data-action="add"] {
+    background: #9b59b6;
+}
+
+.key[data-action="divide"]:hover,
+.key[data-action="multiply"]:hover,
+.key[data-action="subtract"]:hover,
+.key[data-action="add"]:hover {
+    background: #8e44ad;
+}
